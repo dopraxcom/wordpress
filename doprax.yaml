@@ -9,6 +9,8 @@ services:
         - name: mysql_vol
           mount: /var/lib/mysql/
       envs:
-        - DB_PASS: PASSWORD
-        - DB_NAME: development
+        - MYSQL_ROOT_PASSWORD: PASSWORD
+        - MYSQL_DATABASE: db01
+        - MYSQL_USER: dbuser01
+        - MYSQL_PASSWORD: PASSWORD
   
