@@ -1,0 +1,14 @@
+volumes:
+  - name:  http_root
+    mount: /var/www/http/
+
+services:
+  - mysql:
+      tag: 5.7
+      volumes:
+        - name: mysql_vol
+          mount: /var/lib/mysql/
+      envs:
+        - DB_PASS: PASSWORD
+        - DB_NAME: development
+  
