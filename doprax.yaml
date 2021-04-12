@@ -1,6 +1,6 @@
 volumes:
   - name:  http_root
-    mount: /var/www/http/
+    mount: /var/www/html/
 
 services:
   - mysql:
@@ -10,7 +10,7 @@ services:
           mount: /var/lib/mysql/
       envs:
         - MYSQL_ROOT_PASSWORD: PASSWORD
-        - MYSQL_DATABASE: db01
+        - MYSQL_DATABASE: wordpress
         - MYSQL_USER: dbuser01
         - MYSQL_PASSWORD: PASSWORD
   
